@@ -74,7 +74,31 @@ nav{
     transition: ease-in-out 0.3s;
 }
 
+/* fin header */
+/* second-face */
+#second_face{
+    width: 100%;
+    height: auto;
+    display: flex;
+    /* display: flex;
+    flex-wrap: wrap;
+    align-items: center; */
+    
+}
+.bottons_agreements{
+    display: flex;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    /* flex-wrap: wrap; */
 
+}
+.bottons_agreements img{
+    width: 70%;
+}
+
+/* second-face fin */
 
 /* footer */
 #seventh_face{
