@@ -75,6 +75,26 @@ nav{
 }
 
 /* fin header */
+/* FIRST-FACE */
+.btn_neon{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: black;
+    letter-spacing: 4px;
+    font-size: 24px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.btn_neon:hover{
+    background: #5BB318;
+    box-shadow: 0 0 10px #5BB318, 0 0 40px #5BB318,
+    0 0 80px #5BB318 ;
+}
+
+
+/* FIRST-FACE FIN */
 /* second-face */
 #second_face{
     width: 100%;
