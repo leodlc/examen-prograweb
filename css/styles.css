@@ -78,7 +78,7 @@ nav{
 /* FIRST-FACE */
 #first_face{
     width: 100%;
-    
+    background-color: black;
     padding-top: 30px;
     margin-bottom: 30px;
     
@@ -108,6 +108,7 @@ nav{
     text-decoration: none;
     overflow: hidden;
     transition: 0.2s;
+    color:white;
     
 }
 .btn_neon:hover{
