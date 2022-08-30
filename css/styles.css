@@ -1,10 +1,36 @@
 *{
     margin:0;
+    padding: 0;
     /* padding: 0; */
     box-sizing: border-box;
     
     font-family: 'Nunito Sans', sans-serif;
     font-family: 'Raleway', sans-serif;
+
+    line-height: 1.5;
+}
+@keyframes animateIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes animateOut {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(0);
+    }
 }
 html{
     scroll-behavior: smooth;
@@ -34,7 +60,6 @@ nav{
     /* background: #FC997C; */
     /* background-color: rgba(255, 255, 255, 0.6); */
     border-bottom: 1px solid transparent;
-    box-shadow: 1px 1px 10px 0 rgba(0,0,0,.2);
     position: fixed;
     top: 0;
     z-index: 100;
@@ -45,17 +70,20 @@ nav{
 .logo_espe{
     display: flex;
     justify-content: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    
+    padding-top: 20px;   
+    padding-bottom: 20px; 
 }
 .logo_espe img{
     width: 25%;
 }
+.logo_espe a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .links_header{
     display: flex;
     justify-content: center;
-    padding-top: 20px;
     padding-bottom: 20px;
     
 }
@@ -63,7 +91,7 @@ nav{
     text-decoration: none;
     color: black;
     font-size: 15px;
-    margin-left: 20px;
+    margin-left: 30px;
     font-weight: 500;
     transition: ease-in-out 0.8s;
     
@@ -77,50 +105,65 @@ nav{
 /* fin header */
 /* FIRST-FACE */
 #first_face{
-    width: 100%;
-    background-color: black;
-    padding-top: 30px;
-    margin-bottom: 30px;
-    
-    
-    
+    display:flex;
+    /* align-items: baseline; */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
-.img_slider{
+#slider{
+    width: 825px;
+    height: 520px;
+    background-color: #303030;
+    border-radius: 22px;
+    /* padding: 0 25px 0 25px; */
+    display: flex;
     
+    justify-content: center;
+    /* margin: auto; */
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.img_slider{
+    padding-top: auto;
     position: relative;
     width: 800px;
     height: 500px;
     margin: 10px;
+    
 }
 
 .img_slider .slide{
     z-index: 1;
     position: absolute;
     width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+.img_slider .slide.active{
+    clip-path:circle(150.0% at 0 50%);
+    transition: 2s;
+    transition-property: clip-path;
 }
 .img_slider .slide img{
     z-index: 1;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 22px;
+    margin: auto;
 }
 .img_slider .slide .info{
     position: absolute;
     top: 0;
-    padding: 15px 30px;
+    padding: 15px 15px;
 }
-.img_slider .slide .info h2{
-    color: white;
-    font-size: 45px;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
+
 .img_slider .slide .info p{
     color: white;
-    background: rgba(0, 0,0, 0.1);
+    background: rgba(0,0,0,0.6);
     font-size: 16px;
-    padding: 10px;
-    border-radius: 4px;
+    padding: 15px;
+    border-radius: 22px;
+    font-weight: bold;
 }
 
 .img_slider .navigation{
@@ -139,20 +182,139 @@ nav{
     border-radius: 50%;
     cursor: pointer;
 }
-
-.bottons_firstface{
+.img_slider .navigation .btn.active{
+    background: #7DCE13;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5); 
+}
+/* botones redes sociales */
+#social{
     display: flex;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    
-    justify-content:space-evenly;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 350px;
+    padding-bottom: 50px;
+}
+.social_media_buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.social_media_buttons i{
+    font-size: 50px;
+    display: inline-block;
+    color: #adb6c7;
+    border:1px sol #adb6c7;
+    border-radius: 50%;
+    width: 68px;
+    height: 68px;
+    line-height: 66px;
+    cursor: pointer;
+    /* margin-top: 50px; */
+    text-align: center;
+    transition: all ease-in-out .3s;
+    /* margin-right: 5px; */
+    justify-content: center;
+    animation: ease animateIn 2s;
+    transition: opacity 2s;
     
 }
-.bottons_firstface div{
+.fa-facebook:hover{
+    color:#fff;
+    background-color: #2570ff;
+    border-color:#2570ff;
+}
+.fa-instagram:hover{
+    color:#fff;
+    background-color:#C13584;
+    border-color: #C13584;
+}
+.fa-twitter:hover{
+    color:#fff;
+    background-color: #2cace4;
+    border-color: #2cace4;
+}
+.fa-youtube:hover{
+    color:#fff;
+    background-color: red;
+    border-color: red;
+}
+.fa-linkedin:hover{
+    color:#fff;
+    background-color: #2b6bb3;
+    border-color: #2b6bb3;
+}
+/* botones redes sociales fin */
+/* botones de utilidades */
+#utils{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 300px;
+    padding-bottom: 50px;
     
 }
+.utils_container{
+    display: flex;
+    flex-direction: column;
+    column-gap: 15px;
+    padding-left: 50px;
+    
+}
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+    align-items: center;
+    margin: 10px;
+}
+
+.utils_container .icon i{
+    font-size: 29px;
+    display: inline-block;
+    color: #adb6c7;
+    border:1px sol #adb6c7;
+    border-radius: 50%;
+    width: 53px;
+    height: 53px;
+    line-height: 56px;
+    cursor: pointer;
+    /* margin-top: 50px; */
+    text-align: center;
+    transition: all ease-in-out .3s;
+    margin-left: 5px;
+    justify-content: center;
+    animation: ease animateIn 2s;
+    transition: opacity 2s;
+    
+    
+}
+.utils_container i:hover{
+    color:black;
+    background-color: #086C34;
+    border-color: #086C34;
+
+}
+/* .utils_container i, .utils_container h5{
+    color:black;
+    display: flex;
+    align-items: flex-start;
+    
+} */
+
+/* botones de utilidades fin */
+
+/* FIRST-FACE FIN */
+
+
+/* EXTRA FACES */
 .btn_neon{
-    border: 2px solid #C3FF99;
+    border: 2px solid #086C34;
     border-radius: 10px;
     position: relative;
     display: inline-block;
@@ -167,9 +329,9 @@ nav{
     
 }
 .btn_neon:hover{
-    background: #5BB318;
-    box-shadow: 0 0 10px #5BB318, 0 0 40px #5BB318,
-    0 0 80px #5BB318 ;
+    background: #086C34;
+    box-shadow: 0 0 10px #086C34, 0 0 40px #086C34,
+    0 0 80px #086C34 ;
     border: 0;
     transition-delay: 1s;
 }
@@ -183,7 +345,7 @@ nav{
     left: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg,transparent,#5BB318)
+    background: linear-gradient(90deg,transparent,#086C34)
     
 }
 .btn_neon:hover #span1{
@@ -196,7 +358,7 @@ nav{
     right: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(270deg,transparent,#5BB318)
+    background: linear-gradient(270deg,transparent,#086C34)
     
 }
 .btn_neon:hover #span3{
@@ -209,7 +371,7 @@ nav{
     right: 0%;
     width: 2px;
     height: 100%;
-    background: linear-gradient(180deg,transparent,#5BB318)
+    background: linear-gradient(180deg,transparent,#086C34)
     
 }
 .btn_neon:hover #span2{
@@ -223,7 +385,7 @@ nav{
     left: 0%;
     width: 2px;
     height: 100%;
-    background: linear-gradient(360deg,transparent,#5BB318)
+    background: linear-gradient(360deg,transparent,#086C34)
     
 }
 .btn_neon:hover #span4{
@@ -233,18 +395,24 @@ nav{
     transition-delay: 0.75s;
 }
 
-
-
-/* FIRST-FACE FIN */
+/* EXTRA FACES FIN */
 /* second-face */
+
+#extra_face {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 #second_face{
     width: 100%;
     height: auto;
     display: flex;
-    /* display: flex;
-    flex-wrap: wrap;
-    align-items: center; */
-    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
 }
 .bottons_agreements{
     display: flex;
@@ -252,6 +420,8 @@ nav{
     padding-top: 30px;
     padding-right: 30px;
     padding-bottom: 30px;
+    animation: ease animateIn 1s;
+    transition: opacity 1s;
     /* flex-wrap: wrap; */
 
 }
@@ -259,11 +429,22 @@ nav{
     width: 70%;
 }
 
+
+.bottons_firstface{
+    display: flex;
+    justify-content: center;
+    column-gap: 25px;
+    background-color: #303030;
+    border-radius: 22px;
+    padding: 25px;
+    width: fit-content;
+}
+
 /* second-face fin */
 
 /* footer */
 #seventh_face{
-    background-color: #464F41;
+    background-color: #303030;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 50px;
@@ -365,4 +546,24 @@ nav{
         height: 8px;
         margin: 6px;
     }
+}
+@media (max-width: 420px){
+    .img_slider{
+        width: 320px;
+        height: 200px;
+    }
+    .img_slider .slide .info{
+        padding: 5px 10px;
+    }
+    .img_slider .slide .info h2{
+        font-size: 25px;
+    }
+    .img_slider .slide .info p{
+        width: 90%;
+        font-size: 11px;
+    }
+    .img_slider .navigation{
+        bottom: 10px;
+    }
+    
 }

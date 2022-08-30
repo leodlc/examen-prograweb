@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preload" href="css/normalice.css" as="style">
     <link rel="preload" href="css/styles.css" as="style">
+    
     <title>Universidad de las fuerzas Armadas ESPE</title>
     
 </head>
@@ -23,7 +25,7 @@
                 <section class="container_header">
 
                     <div class="logo_espe">
-                        <img src="img/first_face-images/ESPEtransparente.png" alt="">
+                        <a href="index.html"><img src="img/first_face-images/ESPEtransparente.png" alt=""></a>
                     </div>
                     <div class="links_header">
                         
@@ -43,57 +45,99 @@
     
     
     <section id="first_face"> <!-- slider  -->
-        <div class="img_slider">
-            <div class="slide">
-                <img src="img/first_face-images/CongresoDeCienciasSociales1.jpeg" alt="">
-                <div class="info">
-                    <h2>Slide 01</h2>
-                    <p>Lorem ipsum dolor sit amet.</p>
+        <section id="social">
+            <div class="social_media_buttons">
+                <a href="https://www.facebook.com/ESPE.U"><i class="fa-brands fa-facebook" ></i></a>
+                <a href="https://www.instagram.com/espe.u/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/espeu?lang=es"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCjRzHl4K3cY5RhERJoIme-Q"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/UESPE"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </section>
+        <section id="slider">
+            <div class="img_slider" >
+                <div class="slide">
+                    <img src="img/first_face-images/CongresoDeCienciasSociales1.jpeg" alt="">
+                    <div class="info">
+                        <p>III Congreso Internacional de Ciencias Humanas y Sociales.</p>
+    
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/first_face-images/Espe-Matriz-Sangolqui.gif" alt="">
+                    <div class="info">
+                        <p>Campus Matriz Sangolquí</p>
+                        
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/first_face-images/Espe-Sede-Santo-Domingo.jpg" alt="">
+                    <div class="info">
+                        <p>Campus Santo Domingo</p>
+                        
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/first_face-images/Historia_ESPE_Fases-07-723x482.png" alt="">
+                    <div class="info">
+                        <p>La ESPE celebra sus 100 años.</p>
+                        
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/first_face-images/sede-latacunga.jpg" alt="">
+                    <div class="info">
+                        <p>Campus Guillermo Rodriguez Lara; sede Latacunga</p>
+                        
+                    </div>
+                </div>
+                <div class="navigation">
+                    <div class="btn active"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                </div>
+            </div>
+        </section>
+        <section id="utils">
+            <div class="utils_container" >
 
+                <div class="icon">
+                    <i class="fa-solid fa-computer"></i>
+                    <h5>MI ESPE</h5>
                 </div>
-            </div>
-            <div class="slide">
-                <img src="img/first_face-images/Espe-Matriz-Sangolqui.gif" alt="">
-                <div class="info">
-                    <h2>Slide 02</h2>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    
+                <div class="icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h5>ALUMNI</h5>
                 </div>
-            </div>
-            <div class="slide">
-                <img src="img/first_face-images/Espe-Sede-Santo-Domingo.jpg" alt="">
-                <div class="info">
-                    <h2>Slide 03</h2>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    
-                </div>
-            </div>
-            <div class="slide">
-                <img src="img/first_face-images/Historia_ESPE_Fases-07-723x482.png" alt="">
-                <div class="info">
-                    <h2>Slide 04</h2>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    
-                </div>
-            </div>
-            <div class="slide">
-                <img src="img/first_face-images/sede-latacunga.jpg" alt="">
-                <div class="info">
-                    <h2>Slide 05</h2>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    
-                </div>
-            </div>
-            <div class="navigation">
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-                <div class="btn"></div>
-            </div>
-        </div>
+                 <div class="icon">
+                    <i class="fa-solid fa-medal">
+                    </i>
+                    <h5>BECAS</h5>
+                 </div>
+                 <div class="icon">
+                    <i class="fa-solid fa-calendar">
+                    </i>
+                    <h5>CALENDARIO</h5>
+                 </div>
+                 <div class="icon">
+                    <i class="fa-solid fa-earth-americas">
+                    </i>
+                    <h5>ESPE MUNDO</h5>
+                 </div>
+                 <div class="icon">
+                    <i class="fa-solid fa-trophy"></i>
+                    <h5>CLUBES</h5>
+                 </div>
+                  
 
-
+            </div>
+        </section>
+    </section>
+        
+    <section id="extra_face">
+        
         <div class="bottons_firstface">
 
             <a href="#" class="btn_neon">
@@ -127,39 +171,39 @@
         </div>
     </section>
     <section id="second_face"> <!-- sitios de interés -->
-        <div class="bottons_agreements">
+        <div class="bottons_agreements" >
             
                 
-                <a href="">
+                <a href=""class="btn_agre">
                     <img src="img/convenios/centro-de-posgrados-espe-300x150.png" alt="">
                 </a>
             
             
                 
-                <a href="">
+                <a href=""class="btn_agre">
                     <img src="img/convenios/convenios-espe-300x150.png" alt="">
                 </a>
             
             
-                <a href="">
+                <a href=""class="btn_agre">
                     <img src="img/convenios/idiomas-espe-300x150.png" alt="">
                 </a>
                 
             
             
-                <a href="">
+                <a href=""class="btn_agre">
                     <img src="img/convenios/innovativa-espe-300x150.png" alt="">
                 </a>
                 
             
             
-                <a href="">
+                <a href=""class="btn_agre">
                     <img src="img/convenios/logo-espe-medios-300x150.png" alt="">
                 </a>
 
             
             
-                <a href="">
+                <a href=""class="btn_agre">
                     <img src="img/convenios/centro-de-educacion-continua-espe-300x150.png" alt="">
                 </a>
 
@@ -276,5 +320,8 @@
             Todos los derechos reservados 2022</h6>
     </section>
     <script src="js/animation.js"></script>
+    <script src="js/slider_firstface.js"></script>
+    <script src="https://kit.fontawesome.com/7841fd6062.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
